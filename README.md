@@ -196,6 +196,7 @@ All services run in Docker containers and communicate over an internal network.
 | `GEMINI_API_KEY` | **YES** | — | Your Gemini API key |
 | `GEMINI_MODEL` | No | `gemini-2.0-flash` | Gemini model for answer generation |
 | `POSTGRES_PASSWORD` | No | `documind_secret_2024` | DB password |
+| `MONGODB_URI` | No | — | Optional MongoDB Atlas URI for future Mongo-backed features |
 | `JWT_SECRET_KEY` | No (change for prod) | dev key | Token signing key |
 | `CHUNK_SIZE` | No | `800` | Tokens per chunk |
 | `CHUNK_OVERLAP` | No | `150` | Overlap between chunks |
