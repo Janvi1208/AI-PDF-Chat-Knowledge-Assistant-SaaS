@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0d0e11;
+  --surface: #13151a;
+  --surface2: #1a1d24;
+  --surface3: #21252f;
+  --border: rgba(255,255,255,0.07);
+  --border2: rgba(255,255,255,0.13);
+  --text: #f0f0f2;
+  --text2: #8b8d97;
+  --text3: #5a5c66;
+  --accent: #6366f1;
+  --accent2: #818cf8;
+  --accent-glow: rgba(99,102,241,0.12);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
+* { box-sizing: border-box; }
+html, body { background: var(--bg); color: var(--text); font-family: 'DM Sans', system-ui, sans-serif; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--surface3); border-radius: 2px; }
+
+.prose-chat h1, .prose-chat h2, .prose-chat h3 { font-size: 14px; font-weight: 600; margin: 12px 0 6px; }
+.prose-chat p { margin: 0 0 8px; line-height: 1.7; }
+.prose-chat p:last-child { margin-bottom: 0; }
+.prose-chat ul, .prose-chat ol { padding-left: 18px; margin: 6px 0; }
+.prose-chat li { margin-bottom: 4px; }
+.prose-chat strong { font-weight: 600; }
+.prose-chat code { font-family: monospace; font-size: 12px; background: rgba(255,255,255,0.08); padding: 1px 5px; border-radius: 3px; }
+
+@keyframes pulse-dot { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+@keyframes bounce-dot { 0%,60%,100% { transform:translateY(0); } 30% { transform:translateY(-5px); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fade-in { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:translateY(0); } }
+
+.animate-fade-in { animation: fade-in 0.2s ease; }
+.typing-dot { width:6px; height:6px; border-radius:50%; background:var(--accent); display:inline-block; animation: bounce-dot 1.2s infinite; }
+.typing-dot:nth-child(2) { animation-delay:0.2s; }
+.typing-dot:nth-child(3) { animation-delay:0.4s; }
+.status-pulse { animation: pulse-dot 1.5s infinite; }
