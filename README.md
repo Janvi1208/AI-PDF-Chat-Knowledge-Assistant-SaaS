@@ -198,6 +198,7 @@ All services run in Docker containers and communicate over an internal network.
 | `POSTGRES_PASSWORD` | No | `documind_secret_2024` | DB password |
 | `MONGODB_URI` | No | — | Optional MongoDB Atlas URI for future Mongo-backed features |
 | `JWT_SECRET_KEY` | No (change for prod) | dev key | Token signing key |
+| `PORT` | No | `8000` locally, `10000` on Render | Backend port. Render injects this automatically. |
 | `CHUNK_SIZE` | No | `800` | Tokens per chunk |
 | `CHUNK_OVERLAP` | No | `150` | Overlap between chunks |
 | `TOP_K_RETRIEVAL` | No | `5` | Chunks retrieved per query |

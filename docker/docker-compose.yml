@@ -50,6 +50,7 @@ services:
       REDIS_URL: redis://redis:6379
       CHROMA_PERSIST_DIR: /app/chroma_db
       ENVIRONMENT: ${ENVIRONMENT:-development}
+      PORT: 8000
     volumes:
       - chroma_data:/app/chroma_db
       - uploads_data:/app/uploads
